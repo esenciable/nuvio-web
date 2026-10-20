@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" class="no-flex-gap no-css-grid no-css-math no-backdrop-filter no-aspect-ratio">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="assets/runtime/legacy-features.5399d472eb604445.js"></script>
+    <script>
+      (function configureTizenLaunch() {
+        var root = typeof globalThis !== "undefined" ? globalThis : window;
+        var search = String((window.location && window.location.search) || "").toLowerCase();
+        var userAgent = String(
+          (window.navigator && window.navigator.userAgent) || ""
+        ).toLowerCase();
+        var webapis = root.webapis || {};
+        var isTizenLaunch = Boolean(
+          root.__NUVIO_PLATFORM__ === "tizen" ||
+          root.tizen ||
+          root.avplay ||
+          webapis.avplay ||
+          webapis.avPlay ||
+          webapis.productinfo ||
+          search.indexOf("wrapper=tizen") !== -1 ||
+          userAgent.indexOf("tizen") !== -1
+        );
+
+        if (!isTizenLaunch) {
+          return;
+        }
+
+        root.__NUVIO_PLATFORM__ = "tizen";
+        var viewport = document.querySelector("meta[name='viewport']");
+        if (!viewport) {
+          viewport = document.createElement("meta");
+          viewport.name = "viewport";
+          document.head.appendChild(viewport);
+        }
+        viewport.setAttribute(
+          "content",
+          "width=1920, height=1080, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+      })();
+      (function configureVidaaLaunch() {
+        var root = typeof globalThis !== "undefined" ? globalThis : window;
+        var search = String((window.location && window.location.search) || "").toLowerCase();
+        var userAgent = String(
+          (window.navigator && window.navigator.userAgent) || ""
+        ).toLowerCase();
+        var isVidaaLaunch = Boolean(
+          root.__NUVIO_PLATFORM__ === "vidaa" ||
+          root.Hisense_GetOSVersion ||
+          root.Hisense_GetFirmWareVersion ||
+          root.Hisense_installApp ||
+          root.Hisense_Exit ||
+          root.omi_platform ||
+          root.opera_omi ||
+          search.indexOf("wrapper=vidaa") !== -1 ||
+          search.indexOf("platform=vidaa") !== -1 ||
+          userAgent.indexOf("vidaa") !== -1 ||
+          userAgent.indexOf("hisense") !== -1
+        );
+
+        if (!isVidaaLaunch) {
+          return;
+        }
+
+        root.__NUVIO_PLATFORM__ = "vidaa";
+        var viewport = document.querySelector("meta[name='viewport']");
+        if (!viewport) {
+          viewport = document.createElement("meta");
+          viewport.name = "viewport";
+          document.head.appendChild(viewport);
+        }
+        viewport.setAttribute(
+          "content",
+          "width=1920, height=1080, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+        if (document.documentElement) document.documentElement.classList.add("vidaa-tv");
+
+        // The platform adapter installs the focused-field keyboard fallback.
+
+        // PWA/offline support is VIDAA-only. Do not register a service worker
+        // or manifest on Tizen, webOS, or normal browser launches.
+        try {
+          var manifestLink = document.querySelector("link[data-nuvio-vidaa-manifest]");
+          if (!manifestLink) {
+            manifestLink = document.createElement("link");
+            manifestLink.rel = "manifest";
+            manifestLink.href = "manifest.json";
+            manifestLink.setAttribute("data-nuvio-vidaa-manifest", "true");
+            document.head.appendChild(manifestLink);
+          }
+        } catch (_) {}
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("sw.js").catch(function () {});
+          });
+        }
+      })();
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Nuvio" />
+    <meta name="theme-color" content="#0a0a14" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/nuviotv.png" />
+    <link rel="apple-touch-icon" href="assets/images/nuviotv.png" />
+    <title>Nuvio TV</title>
+
+    <link rel="stylesheet" href="css/bundle.5399d472eb604445.css" />
+  </head>
+  <body>
+    <script src="boot-guard.5399d472eb604445.js"></script>
+    <!-- Tizen fast path: deferred scripts keep document order but no longer
+         parser-block first paint / focus-engine init on single-core TVs. -->
+    <script
+      defer
+      src="core-js.bundle.5399d472eb604445.js"
+      onerror="window.NuvioBootGuard && window.NuvioBootGuard.scriptFailed(this.src)"
+    ></script>
+    <script defer src="nuvio.env.5399d472eb604445.js"></script>
+
+    <script defer src="assets/libs/qrcode-generator.5399d472eb604445.js"></script>
+
+    <script
+      defer
+      src="app.bundle.5399d472eb604445.js"
+      onerror="window.NuvioBootGuard && window.NuvioBootGuard.scriptFailed(this.src)"
+    ></script>
+  </body>
+</html>
