@@ -4,7 +4,7 @@
   var values = {
   "NUVIO_SUPABASE_URL": "https://api.nuvio.tv",
   "NUVIO_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzgxNTIxMzQ2LCJleHAiOjE5MzkyMDEzNDZ9.tmQaj682pwzehpqlgCDMnySOqiUvpgRbrE43T4VJpDI",
-  "NUVIO_SUPABASE_FALLBACK_URL": "https://api-two.nuvioapp.space",
+  "NUVIO_SUPABASE_FALLBACK_URL": "",
   "TV_LOGIN_WEB_BASE_URL": "https://nuvio.tv/tv-login",
   "DEVICE_LOGIN_WEB_BASE_URL": "https://nuvio.tv/link",
   "YOUTUBE_PROXY_URL": "youtube-proxy.html",
@@ -17,7 +17,7 @@
   "SUPPORT_URL": "https://nuvio.tv/support",
   "SPONSOR_NAMES": "ragmehos.",
   "TMDB_API_KEY": "439c478a771f35c05022f9feabcca01c",
-  "TRAKT_CLIENT_ID": "",
+  "TRAKT_CLIENT_ID": "5783db7c46a5b22f072d4b224f9bd7dc2cbaba66dbe3515d1feb59e3ca72394c",
   "TRAKT_CLIENT_SECRET": "",
   "SIMKL_CLIENT_ID": "",
   "MDBLIST_CLIENT_ID": "",
