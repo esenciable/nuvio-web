@@ -16,7 +16,7 @@
   "SUPPORTERS_API_BASE_URL": "https://nuvio.tv/",
   "SUPPORT_URL": "https://nuvio.tv/support",
   "SPONSOR_NAMES": "ragmehos.",
-  "TMDB_API_KEY": "",
+  "TMDB_API_KEY": "439c478a771f35c05022f9feabcca01c",
   "TRAKT_CLIENT_ID": "",
   "TRAKT_CLIENT_SECRET": "",
   "SIMKL_CLIENT_ID": "",
