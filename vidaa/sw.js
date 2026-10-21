@@ -1,21 +1,21 @@
-var CACHE_NAME = "nuvio-vidaa-838531ac2dc1de1e";
+var CACHE_NAME = "nuvio-vidaa-69e73a4e59f3a2be";
 var ASSETS = [
   "./",
   "./index.html",
   "./vidaa.html",
   "./manifest.json",
-  "./boot-guard.838531ac2dc1de1e.js",
-  "./core-js.bundle.838531ac2dc1de1e.js",
-  "./nuvio.env.838531ac2dc1de1e.js",
-  "./app.bundle.838531ac2dc1de1e.js",
-  "./assets/runtime/legacy-features.838531ac2dc1de1e.js",
+  "./boot-guard.69e73a4e59f3a2be.js",
+  "./core-js.bundle.69e73a4e59f3a2be.js",
+  "./nuvio.env.69e73a4e59f3a2be.js",
+  "./app.bundle.69e73a4e59f3a2be.js",
+  "./assets/runtime/legacy-features.69e73a4e59f3a2be.js",
   "./assets/runtime/plugin-worker.js",
-  "./assets/libs/qrcode-generator.838531ac2dc1de1e.js",
+  "./assets/libs/qrcode-generator.69e73a4e59f3a2be.js",
   "./assets/libs/quickjs-emscripten.global.js",
   "./assets/libs/ass.min.js",
   "./assets/libs/hls.min.js",
   "./assets/libs/dash.all.min.js",
-  "./css/bundle.838531ac2dc1de1e.css"
+  "./css/bundle.69e73a4e59f3a2be.css"
 ];
 
 self.addEventListener("install", function (e) {
