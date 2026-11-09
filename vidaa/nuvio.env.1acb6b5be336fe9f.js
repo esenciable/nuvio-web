@@ -16,13 +16,15 @@
   "SUPPORTERS_API_BASE_URL": "https://nuvio.tv/",
   "SUPPORT_URL": "https://nuvio.tv/support",
   "SPONSOR_NAMES": "ragmehos.",
-  "TMDB_API_KEY": "439c478a771f35c05022f9feabcca01c",
+  "TMDB_API_KEY": "453dcf91496772916da708c7f2b90e9d",
   "TRAKT_CLIENT_ID": "5783db7c46a5b22f072d4b224f9bd7dc2cbaba66dbe3515d1feb59e3ca72394c",
   "TRAKT_CLIENT_SECRET": "",
   "SIMKL_CLIENT_ID": "",
   "MDBLIST_CLIENT_ID": "",
   "SIMKL_APP_NAME": "nuvio",
-  "PREMIUMIZE_CLIENT_ID": ""
+  "PREMIUMIZE_CLIENT_ID": "",
+  "NUVIO_RUNTIME_BEACON_URL": "",
+  "NUVIO_MAGIS_PROXY_URL": ""
 };
   for (var key in values) {
     if (Object.prototype.hasOwnProperty.call(values, key)) {
