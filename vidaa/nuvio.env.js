@@ -24,7 +24,7 @@
   "SIMKL_APP_NAME": "nuvio",
   "PREMIUMIZE_CLIENT_ID": "",
   "NUVIO_RUNTIME_BEACON_URL": "",
-  "NUVIO_MAGIS_PROXY_URL": ""
+  "NUVIO_MAGIS_PROXY_URL": "https://tvvidaa.attendanceos.app"
 };
   for (var key in values) {
     if (Object.prototype.hasOwnProperty.call(values, key)) {
